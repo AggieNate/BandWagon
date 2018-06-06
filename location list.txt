@@ -1,37 +1,4 @@
-const API_KEY = "&apikey=S8P66L8bOZUZaq7TME2QoF5NTK2AoAVp"
-//const concertURL = 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=300&startDateTime=2018-06-05T00:00:00Z&endDateTime=2018-06-12T00:00:00Z&size=120&apikey='
-//const concertURL = 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&countryCode=US&size=200&apikey='
-const concertURL = 'https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&size=10'
-//classificationName=music&
-//const concertURL = 'https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&countryCode=US&size=20&classificationName=County&apikey=S8P66L8bOZUZaq7TME2QoF5NTK2AoAVp'
-let movieList=$("#movieList")
-let pickle="Country"
-var genreCats = {     
-    Alternative : "KnvZfZ7vAvv",
-    Ballads : "KnvZfZ7vAve" ,
-    Blues : "KnvZfZ7vAvd",
-    Classical : "KnvZfZ7vAeJ",
-    Country: "KnvZfZ7vAv6",
-    Dance: "KnvZfZ7vAvF",
-    Folk: "KnvZfZ7vAva",
-    Rap: "KnvZfZ7vAv1",
-    Holiday: "KnvZfZ7vAvJ",
-    Jazz: "KnvZfZ7vAvE",
-    Medieval: "KnvZfZ7vAvI",
-    Metal: "KnvZfZ7vAvt",
-    NewAge: "KnvZfZ7vAvn",
-    Other: "KnvZfZ7vAvl",
-    Pop: "KnvZfZ7vAev",
-    RnB: "KnvZfZ7vAee",
-    Reggae: "KnvZfZ7vAed",
-    Religious: "KnvZfZ7vAe7",
-    Rock: "KnvZfZ7vAeA",
-    Undefined: "KnvZfZ7vAe6",
-    World: "KnvZfZ7vAeF"
-}
-
-var locationRaw ={
-    USA : "200",
+USA : "200",
 Abilene : "212",
 Sweetwater : "212",
 Albany : "213",
@@ -39,7 +6,7 @@ Schenectady : "213",
 Troy : "213",
 Albany : "214",
 Albuquerque : "215",
-Santa_Fe : "215",
+Santa Fe : "215",
 Alexandria : "216",
 Alpena : "217",
 Amarillo : "218",
@@ -56,15 +23,15 @@ PortArthur : "227",
 Bend : "228",
 Billings : "229",
 Biloxi : "230",
-Gulfport : "230" ,
+Gulfport : "230 ,
 Binghamton : "231",
 Birmingham : "232",
 Bluefield : "233",
 Beckley : "233",
-Oak_Hill : "233",
+Oak Hill : "233",
 Boise : "234",
 Boston : "235",
-Bowling_Green : "236",
+Bowling Green : "236",
 Buffalo : "237",
 Burlington : "238",
 Plattsburgh : "238",
@@ -96,28 +63,28 @@ Cleveland : "253",
 Colorado_Springs : "254",
 Pueblo : "254",
 Columbia : "255",
-Jefferson_City : "255",
+Jefferson City : "255",
 Columbia_SC : "256",
 Columbus : "257",
 Tupelo : "257",
-West_Point : "257",
+West Point : "257",
 Columbus_GA : "258",
 Columbus_OH : "259",
 Corpus_Christi : "260",
 Dallas : "261",
-Fort_Worth : "261",
+Fort Worth : "261",
 Davenport : "262",
-Rock_Island : "262",
+Rock Island : "262",
 Moline : "262",
 Dayton : "263",
 Denver : "264",
-Des_Moines : "265",
+Des Moines : "265",
 Ames : "265",
 Detroit : "266",
 Dothan : "267",
 Duluth  : "268",
 Superior : "268",
-El_Paso : "269",
+El Paso : "269",
 Elmira : "270",
 Erie : "271",
 Eugene : "272",
@@ -128,9 +95,9 @@ Fargo : "276",
 Valley_City : "276",
 Flint : "277",
 Saginaw : "277",
-Bay_City : "277",
+Bay City : "277",
 Florence : "278",
-Myrtle_Beach : "278" ,
+Myrtle_Beach : 278" ,
 Fort_Myers  : "279",
 Naples : "279",
 Fort_Smith : "280",
@@ -140,7 +107,7 @@ Rogers : "280",
 For_Wayne : "281",
 Fresno : "282",
 Visalia : "282",
-Gainesville : "283",
+Gainesville : "283	,
 Glendive : "284",
 Grand_Junction : "285",
 Montrose : "285",
@@ -270,7 +237,7 @@ Auburn : "361",
 Portland_OR : "362",
 Presque_Isle : "363",
 Providence : "364",
-New_Bedford : "364",
+New Bedford : "364",
 Quincy : "365",
 Hannibal : "365",
 Keokuk : "365",
@@ -284,7 +251,7 @@ Petersburg : "369",
 Roanoke : "370",
 Lynchburg : "370",
 Rochester : "371",
-Mason_City : "371",
+Mason City : "371",
 Austin : "371",
 Rochester_NY : "372",
 Rockford : "373",
@@ -328,11 +295,11 @@ Terre_Haute  : "397",
 Toledo  : "398",
 Topeka  : "399",
 Traverse_City  : "400",
-Cadillac  : "400" ,
-Tri_Cities   : "401",
+Cadillac  : "400 ,
+Tri-Cities   : "401",
 Tucson  : "402",
 Tulsa  : "403",
-Twin_Falls  : "404",
+Twin Falls  : "404",
 Tyler  : "405",
 Longview  : "405",
 Lufkin  : "405",
@@ -346,8 +313,8 @@ Washington_DC  : "409",
 Watertown  : "410",
 Wausau  : "411",
 Rhinelander  : "411",
-West_Palm_Beach   : "412",
-Fort_Pierce  : "412",
+West Palm Beach   : "412",
+Fort Pierce  : "412",
 Wheeling  : "413",
 Steubenville  : "413",
 Wichita  : "414",
@@ -363,87 +330,5 @@ Richland  : "418",
 Kennewick  : "418",
 Youngstown  : "419",
 Yuma  : "420",
-El_Centro  : "420",
+El Centro  : "420",
 Zanesville  : "421",
-
-}
-
-var genre = genreCats[pickle]
-console.log(pickle+" is "+genre)
-var genresearch = '&classificationId='+genre
-let city = '&dmaId=300'
-let dateRange ='&startDateTime=2018-06-05T00:00:00Z&endDateTime=2018-06-12T00:00:00Z'
-
-//let listBody=$("#listBody")
-let rock=$("#rock") 
-let hip_hop=$("#hip-hop") 
-let country=$("#county") 
-let world=$("#world") 
-let rnb=$("#rnb") 
-
-rock.click(function(){pickle = 'Rock', buildGenre(), fetchAll()})
-hip_hop.click(function(){pickle = 'Rap', buildGenre(), fetchAll()})
-country.click(function(){pickle = 'Country', buildGenre(), fetchAll()})
-world.click(function(){pickle = 'World', buildGenre(),fetchAll()})
-rnb.click(function(){pickle = 'RnB', buildGenre(), fetchAll()})
-
-function buildGenre(){
-genre = genreCats[pickle]
-console.log (genre)
-genresearch = '&classificationId='+genre
-console.log(pickle+" clicked")
-//console.log(genresearch)
-}
-
-function fetchAll()
-{
-    console.log(genresearch)
-    console.log(city)
-    console.log(dateRange)
-    let searchstring = concertURL+genresearch+city+dateRange+API_KEY
-    console.log(searchstring)
-    fetch(searchstring)
-    .then(function(response){return response.json()})
-    .then(function(json)
-    {   
-        for (event in json["_embedded"])
-            {
- //               console.log(event)
-                console.log(json["_embedded"][event])
-                return json["_embedded"][event]
-                    
-            }
-        })
-    .then(function(event){
-        movieList.html("")
-        for (i in event)
-                    {
-//                    console.log("i")
-//                    console.log(i)
-//                    console.log(event[i].classifications[0].genre.name)
-//                    console.log('event[i].classifications')
-//                    console.log(event[i].classifications)
-//                    console.log('event[i].classifications.genre')
-//                    console.log(event[i].classifications[0].genre.name)
-//                    console.log('event[i].classifications.genre.name')
-//                    console.log(event[i].classifications.genre.name)
-                    let genre = event[i].classifications[0].genre.name
-                    let subgenre = event[i].classifications[0].subGenre.name
-                    let eventTitle=event[i].name
-                    let venue=event[i]._embedded.venues[0].name
-                    let eventDate=event[i].dates.start.localDate
-//                    console.log(eventDate)
-                    let li = $("<li>").addClass("displayList");
-                    let itemTitle= $("<title>").addClass("textForm")
-                   li.append(eventTitle)
-                   li.append(" at the "+venue)
-                   li.append(" on "+eventDate)
-                   li.append(" Genre:  "+genre)
-                   li.append(" subgenre:  "+subgenre)
-                   movieList.append(li)
-                    }
-        })
-    }
-
-fetchAll()
- 
