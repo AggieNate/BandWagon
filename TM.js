@@ -7,6 +7,7 @@ const concertURL = 'https://app.ticketmaster.com/discovery/v2/events.json?countr
 let movieList=$("#movieList")
 var genrePick="Country"
 var locationPick="Houston"
+var artistPass=[]
 var genreCats = 
 {     
     Alternative : "KnvZfZ7vAvv",
