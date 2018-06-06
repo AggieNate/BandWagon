@@ -3,6 +3,26 @@ body{
     background-color: black;
 }
 
+.genreBar{
+    margin: 0 auto 0 auto;
+    padding: 10px;    
+}
+
+.genreBar ul{
+    margin: 0 auto 0 auto;
+}
+
+.genreBar li{
+    margin: 0 auto 0 auto;
+}
+
+.Genre{
+    list-style: none;
+    color:white;
+    padding: 10px;    
+    margin: 0 auto 0 auto;
+}
+
 h3 {
     font-size: 90px;
     -webkit-text-stroke-width: 1px;
@@ -24,12 +44,6 @@ h3 {
     margin:auto auto 20px auto;
     font-size: 24px;
 }
-
-
-
-
-
-
 
 .textForm{
     display:flex; 
